@@ -13,7 +13,7 @@ import { HeroService } from './hero.service';
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
   ],
   imports: [
     BrowserModule,
