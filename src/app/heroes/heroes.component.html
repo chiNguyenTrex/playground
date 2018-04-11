@@ -1,5 +1,10 @@
-<h2>Hero info</h2>
-<div><span>ID: </span>{{hero.id}}</div>
-<div><span>Name: </span>{{ hero.name | uppercase }}</div>
-<h2>Update info</h2>
-<label>Type new name: <input [(ngModel)]="hero.name" placeholder="name" ></label>
+<h2>Heroes list</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
+    [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
